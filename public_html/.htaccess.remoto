@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Envio Arquivos Sonia"
+AuthUserFile /home/movelaor/sonia/public_html/.htpasswd
+Require valid-user
+Options -Indexes
