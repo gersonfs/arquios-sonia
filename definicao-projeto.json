@@ -1,0 +1,9 @@
+{
+    "name": "SP Perícia Contábil",
+    "host": "arquivos.sppericiacontabil.com.br",
+    "user": "sppericia",
+    "home-page": "https://arquivos.sppericiacontabil.com.br/",
+    "version": "1.0.0",
+    "remote-web": "sppericia@arquivos.sppericiacontabil.com.br:arquivos",
+    "dir": "~"
+}

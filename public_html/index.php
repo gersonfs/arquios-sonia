@@ -13,7 +13,7 @@ $erro = false;
 if (!empty($_POST)) {
     
     try{
-        doUpload($pastaArquivos);
+        doUpload($pastaArquivos, $cliente);
         $msg = "Arquivo Enviado com sucesso!";
     } catch (Exception $ex) {
         $msg = $ex->getMessage();
@@ -22,7 +22,7 @@ if (!empty($_POST)) {
     
 }
 
-function doUpload(string $pastaArquivos) {
+function doUpload(string $pastaArquivos, string $cliente) {
     if($_FILES['arquivo']['error'] != 0) {
         throw new Exception('Erro no envio do arquivo!');
     }
@@ -39,7 +39,7 @@ function doUpload(string $pastaArquivos) {
         throw new Exception("Erro ao enviar o arquivo!");
     }
     
-    mail('sonia.mstaub@gmail.com', 'Novo arquivo enviado', 'Novo arquivo enviado. Nome: ' . basename($destino));
+    mail('peritasonia@gmail.com', 'Novo arquivo enviado cliente ' . $cliente, 'Novo arquivo enviado. Nome: ' . basename($destino));
     
     return true;
 }
